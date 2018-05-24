@@ -23,7 +23,7 @@ public class Squad {
       return maxSize;
   }
 
-  public String getsquadCause(){
+  public String getSquadCause(){
       return squadCause;
   }
 

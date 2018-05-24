@@ -24,7 +24,13 @@
   <input class="form-control" id="hero_age" name="hero_age" placeholder="Age" type="text"></br>
   <input class="form-control" id="hero_special_power" name="hero_special_power" placeholder="Special Power" type="text"></br>
   <input class="form-control" id="hero_weakness" name="hero_weakness" placeholder="Weakness" type="text"></br>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <select class="form-control" name="squad">
+    <option label="">- Select Squad -</option>
+    #foreach ($squad in $squads)
+    <option value="">$squad.getSquadName()</option>
+    #end
+  </select>
+  <button type="submit" class="btn btn-default mt15">Submit</button>
 </form>
 </div>
 </div>
