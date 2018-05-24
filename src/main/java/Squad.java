@@ -1,11 +1,12 @@
 public class Squad {
     private String squadName;
     private int maxSize;
+    private String squadCause;
 
-  public Squad(String squad_name, int squad_size, String squad_cause) {
+  public Squad(String squad_name, String squad_size, String squad_cause) {
       squadName = squad_name; 
       maxSize = Integer.parseInt(squad_size);
-      squadCause = squad_size;
+      squadCause = squad_cause;
 
   }
 
