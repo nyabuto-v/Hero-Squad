@@ -25,7 +25,14 @@ public class SquadTest {
   public void Squad_instantiatesWithSquadCause_String() {
     Squad mySquad = new Squad("Knights", "18", "Defence");
     assertEquals("Defence", mySquad.getsquadCause());
+  }
 
-}
+  @Test
+  public void Squad_retrievesAllSquads_true() {
+    Squad firstSquad = new Squad("Knights", "18", "Defence");
+    Squad secondSquad = new Squad("Vikings", "10", "Attack");
+    assertEquals(true, Squad.all().contains(firstSquad));
+    assertEquals(true, Squad.all().contains(secondSquad));
+  }
 
 }

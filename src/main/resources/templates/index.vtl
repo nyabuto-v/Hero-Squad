@@ -1,0 +1,29 @@
+<h1>Hero Squad</h1>
+<div class="row">
+<div class="col-md-6">
+<p>Add Squad:</p>
+
+<form action="/createSquad" method="post">
+  <input class="form-control" id="squad_name" name="squad_name" placeholder="Name" type="text"></br>
+  <input class="form-control" id="squad_size" name="squad_size" placeholder="Max-Size" type="text"></br>
+  <input class="form-control" id="squad_cause" name="squad_cause" placeholder="Cause" type="text"></br>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<p>
+ #foreach ($squad in $squads)
+ <li>Name of Squad: $squad.getSquadName() | Size of Squad: $squad.getMaxSize() | Cause of Squad: $squad.getsquadCause() </li>
+ #end
+</p>
+</div>
+<div class="col-md-6">
+<p>Add Hero:</p>
+
+<form action="/createHero" method="post">
+  <input class="form-control" id="hero_name" name="hero_name" placeholder="Name" type="text"></br>
+  <input class="form-control" id="hero_size" name="hero_size" placeholder="Max-Size" type="text"></br>
+  <input class="form-control" id="hero_cause" name="hero_cause" placeholder="Cause" type="text"></br>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+</div>
