@@ -21,4 +21,11 @@ public class SquadTest {
     assertEquals(18, mySquad.getMaxSize());
   }
 
+  @Test
+  public void Squad_instantiatesWithSquadCause_String() {
+    Squad mySquad = new Squad("Knights", "18", "Defence");
+    assertEquals("Defence", mySquad.getsquadCause());
+
+}
+
 }

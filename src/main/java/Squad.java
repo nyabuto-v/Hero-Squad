@@ -18,4 +18,8 @@ public class Squad {
       return maxSize;
   }
 
+  public String getsquadCause(){
+      return squadCause;
+  }
+
 }
