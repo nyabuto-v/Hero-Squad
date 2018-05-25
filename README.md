@@ -60,7 +60,22 @@ Tests whether the squad object has been instantiated correctly, which returns tr
 
 #### Deployment
 
+First the project should be configured for deployment, through the following steps;
+Clean the directory.
+Manage the ports.
+Add the procfile file to the root directory.
+Push to Heroku with the following steps;
+ First create an account on Heroku then run the following commands in the terminal;
 
+$heroku login
+
+$heroku create
+
+$git add .
+$git commit -m "informative commit message"
+$git push heroku master 
+
+Once the build message of success has been displayed, get the url on the 5th line from the bottom and open it from a browser to view the application.
 
 #### Built With:
 
@@ -75,6 +90,6 @@ Peter Nyabuto
 
 #### License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License.
 
  
