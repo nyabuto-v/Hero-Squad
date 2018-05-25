@@ -15,4 +15,10 @@ public class HeroTest {
     assertEquals("Vice", myHero.getHeroName());
   }
 
+  @Test
+  public void Hero_instantiatesWithHeroAge_String() {
+    Hero myHero = new Hero("Vice", "26", "Wisdom", "Memory", 2);
+    assertEquals("26", myHero.getHeroAge());
+  }
+
 }
