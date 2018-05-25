@@ -32,5 +32,13 @@ public class HeroTest {
     Hero myHero = new Hero("Vice", "26", "Wisdom", "Memory", 5);
     assertEquals("Memory", myHero.getHeroWeakness());
   }
+  
+  @Test
+  public void Hero_retrievesAllHeroes_true() {
+    Hero firstHero = new Hero("Vice", "26", "Wisdom", "Memory", 6);
+    Hero secondHero = new Hero("Paul", "29", "Solver", "Anger", 7);
+    assertEquals(true, Hero.all().contains(firstHero));
+    assertEquals(true, Hero.all().contains(secondHero));
+  }
 
 }
