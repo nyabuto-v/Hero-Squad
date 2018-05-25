@@ -8,42 +8,55 @@
 
 #### Prerequisites
 
-You need to install the following softwares;
-Java
-Spark
+You need to install the following softwares:
+Java,
+Spark,
+Visual Studio Text Editor
 
 #### Dependencies
-Gradle
+Gradle , Velocity Template Engine, Junit
 
-This is how to install
+This is how to install the softwares required:
 
 Installing gradle;
 
-A step by step series of examples that tell you have to get a development env running
+Download Gradle from the Gradle website.
+
+Extract the downloaded file in the directory you'd like to install Gradle in. /usr/local/gradle is recommended, but not required. This should automatically create a subdirectory located at /usr/local/gradle/gradle-x.x ( x.x is simply a placeholder for the specific version of your Gradle download).
+
+In the command line, add Gradle to your PATH variable with the command: export PATH=/usr/local/gradle/gradle-x.x/bin:$PATH. Again, replace x.x with the specific version of your Gradle download.
 
 Installing Java;
+Click wiki how's blog and follow instructions on how to install Java.  
 
-Say what the step will be
-
-Give the example
-And repeat
-
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+run $ java -version to ensure everything is installed correctly.
 
 #### Running the tests
 
 This is how to run the tests;
 
-Break down into end to end tests
+We use JUnit to create tests to test the back-end logic of our App.
+First we import the JUnit libraries [org.junit.Test, static org.junit.Assert.*]. Using the BDD process, we begin with the simplest behavior then run the first test. Once tests pass, then test through all the individual methods in the two classes, the Hero class and the Squad class.
 
-Explain what these tests test and why
+Example for squad class;
+Tests whether the squad object has been instantiated correctly, which returns true.
 
-Give an example
-And coding style tests
-Explain what these tests test and why
+@Test
+  public void Squad_instantiatesCorrectly_true() {
+    Squad mySquad = new Squad("Knights", "18", "Defence");
+    assertEquals(true, mySquad instanceof Squad);
+  }  
+ Example for Hero class;
+ Tests whether the hero object has been instantiated correctly, which returns true.
 
-Give an example
+ @Test
+  public void Hero_instantiatesCorrectly_true() {
+    Hero myHero = new Hero("Vice", "26", "Wisdom", "Memory", 1);
+    assertEquals(true, myHero instanceof Hero);
+  }
+
+  Once done with the tests, paste the file path provided for in the terminal as output, and check on the test report.
+
 
 #### Deployment
 
@@ -51,7 +64,8 @@ Add additional notes about how to deploy this on a live system
 
 #### Built With:
 
-Spark Framework- The front-end web framework 
+Java programming language,
+Spark Framework- The front-end web framework,
 Gradle - Dependency Management
 
 
@@ -63,6 +77,4 @@ Peter Nyabuto
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
-#### Acknowledgments
-Inspired by: Brian Marete - Moringa School - TM
-           : Yommie Samora 
+ 
