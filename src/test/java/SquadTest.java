@@ -24,7 +24,7 @@ public class SquadTest {
   @Test
   public void Squad_instantiatesWithSquadCause_String() {
     Squad mySquad = new Squad("Knights", "18", "Defence");
-    assertEquals("Defence", mySquad.getsquadCause());
+    assertEquals("Defence", mySquad.getSquadCause());
   }
 
   @Test
