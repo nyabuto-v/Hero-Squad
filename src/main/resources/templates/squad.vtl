@@ -1,0 +1,12 @@
+<div class="row">
+<div class="col-md-4></div>
+<div class="col-md-4>
+    <h1>$squadMembers.getSquadName()</h1>
+    <div>
+    #foreach($members in $squadMembers.getHeroes())
+    <li>$members.getHeroName() ($members.getHeroAge() yrs) | Special Ability: $members.getSpecialPower() | Weakness: $members.getHeroWeaknes() </li>
+    #end
+    </div>
+</div>
+<div class="col-md-4></div>
+</div>

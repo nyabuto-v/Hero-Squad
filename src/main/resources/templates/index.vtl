@@ -12,7 +12,7 @@
 
 <p>
  #foreach ($squad in $squads)
- <li>Name of Squad: $squad.getSquadName() | Size of Squad: $squad.getMaxSize() | Cause of Squad: $squad.getsquadCause() </li>
+ <p class="mb15">Name of Squad: $squad.getSquadName() <br> Size of Squad: $squad.getMaxSize() <br> Cause of Squad: $squad.getSquadCause() <br> <a href="/squad/$squad.getSquadId()">View Squad Members</a></p>
  #end
 </p>
 </div>
@@ -24,13 +24,20 @@
   <input class="form-control" id="hero_age" name="hero_age" placeholder="Age" type="text"></br>
   <input class="form-control" id="hero_special_power" name="hero_special_power" placeholder="Special Power" type="text"></br>
   <input class="form-control" id="hero_weakness" name="hero_weakness" placeholder="Weakness" type="text"></br>
-  <select class="form-control" name="squad">
+  <select class="form-control" name="hero_squad">
     <option label="">- Select Squad -</option>
     #foreach ($squad in $squads)
-    <option value="">$squad.getSquadName()</option>
+    <option value="$squad.getSquadId()">$squad.getSquadName()</option>
     #end
   </select>
   <button type="submit" class="btn btn-default mt15">Submit</button>
 </form>
+
+
+<p>
+ #foreach ($hero in $heroes)
+ <p class="mb15">Name of Hero: $hero.getHeroName() <br> Age of Hero: $hero.getHeroAge() <br> Hero Special Power Ability: $hero.getSpecialPower() <br> Hero Weakness: $hero.getHeroWeakness()</p>
+ #end
+</p>
 </div>
 </div>
